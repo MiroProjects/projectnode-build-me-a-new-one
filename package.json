@@ -1,0 +1,27 @@
+{
+  "name": "node-create-files-for-webpage-development",
+  "version": "1.0.0",
+  "description": "System for creating files(JS/HTML/CSS..) for static web page development. Build-me-a-new-one also uses a JSON file for the main projects which could be created. Additionally, it has options for including and downloading remote libraries like JQuery and Bootstrap to the project.",
+  "main": "build-me-a-new-one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiroProjects/projectnode-build-me-a-new-one.git"
+  },
+  "keywords": [
+    "Web",
+    "page",
+    "Automation",
+    "Download",
+    "Create",
+    "files"
+  ],
+  "author": "Miroslav Terziyski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiroProjects/projectnode-build-me-a-new-one/issues"
+  },
+  "homepage": "https://github.com/MiroProjects/projectnode-build-me-a-new-one#readme"
+}
