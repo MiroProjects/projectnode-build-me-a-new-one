@@ -5,7 +5,8 @@ const html = require("../config/configVariables");
 //Enumeration for the start HTML content for every project
 var projectEnum = {
     basic: "simple",
-    bootstrap: "bootstrap"
+    bootstrap: "bootstrap",
+    jquery: "jquery"
 };
 
 var createFile = (files, folderName, path, projectType, content = "") => {
@@ -26,6 +27,9 @@ var createFile = (files, folderName, path, projectType, content = "") => {
             }
             else if(projectType.includes(projectEnum.basic)){
                 content = html.html5;
+            }
+            else if(projectType.includes(projectEnum.jquery)){
+                content = html.htmlJquery;
             }
         }
 

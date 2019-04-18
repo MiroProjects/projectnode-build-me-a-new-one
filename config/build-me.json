@@ -18,5 +18,17 @@
             "@jquery",
             "script.js"
         ]
+    },
+    "jquery_web_project": {
+        "_": [
+            "index.html"
+        ],
+        "style": [
+            "style.css"
+        ],
+        "scripts": [
+            "@jquery",
+            "script.js"
+        ]
     }
 }

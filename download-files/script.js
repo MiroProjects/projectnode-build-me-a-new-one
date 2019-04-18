@@ -20,7 +20,9 @@ var downloadFromGit = (name, fullPath) => {
 var getGithubInformation = (url, fullPath, name) => {
     cp.exec(`git clone ${url} ${fullPath}/${name}`, (err) =>{
         if (err) {
-            console.log("Please make sure you have a git cmd client installed on your device!\n If you do not have then a CDN content is also included in the html file");
+            console.log("----------");
+            console.log("Please make sure you have a git cmd client installed on your device!\nIf you do not have then a CDN content is also included in the html file!");
+            console.log("----------");
         }
     });
 };

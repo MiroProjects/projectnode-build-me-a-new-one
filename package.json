@@ -4,7 +4,7 @@
   "description": "System for creating files(JS/HTML/CSS..) for static web page development. Build-me-a-new-one also uses a JSON file for the main projects which could be created. Additionally, it has options for including and downloading remote libraries like JQuery and Bootstrap to the project.",
   "main": "build-me-a-new-one.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node build-me-a-new-one bootstrap-web-project BootstrapProject"
   },
   "repository": {
     "type": "git",

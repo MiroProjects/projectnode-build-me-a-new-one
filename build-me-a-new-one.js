@@ -10,7 +10,7 @@ readFile.readJsonFile("build-me", (data) => {
             //Check if there is a parameter given for the project name and sets default if there isn't
             if (key == projectType) {
                 if(!projectName){
-                    projectName = "Project";
+                    projectName = "WebProject";
                 }
                 createAllFiles(data[key]);
                 return;
