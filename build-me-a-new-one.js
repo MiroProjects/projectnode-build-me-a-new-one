@@ -1,6 +1,6 @@
 const readFile = require('./read-configuration-files/script');
 const file = require('./create-project/script');
-const projectType = process.argv[2];
+const projectType = changeDashesWithUnderscopes(process.argv[2]);
 var projectName = process.argv[3];
 
 //Read the data for the project types
@@ -33,3 +33,9 @@ var createAllFiles = (data) => {
         }
     }
 }
+
+function changeDashesWithUnderscopes(prType){
+    if (prType) {
+        return prType.split("-").join("_");
+    }
+};
