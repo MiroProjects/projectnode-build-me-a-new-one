@@ -2,6 +2,7 @@ const fs = require('fs');
 const downloadFile = require("../download-files/script");
 const html = require("../config/configVariables");
 
+//Enumeration for the start HTML content for every project
 var projectEnum = {
     basic: "simple",
     bootstrap: "bootstrap"
