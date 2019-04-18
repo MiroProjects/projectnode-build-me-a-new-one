@@ -1,5 +1,5 @@
 const readFile = require('./read-configuration-files/script');
-const createFile = require('./create-project/script');
+const file = require('./create-project/script');
 
 var getProjectType = process.argv[2];
 var projectName = process.argv[3];
@@ -8,12 +8,15 @@ readFile.readJsonFile("build-me", (data) => {
     for (var key in data) {
         if (data.hasOwnProperty(key)) {
             if (key == getProjectType) {
+                if(!projectName){
+                    projectName = "Project";
+                }
                 createAllFiles(data[key]);
                 return;
             }
         }
     }
-    console.log("Wrong project name!");
+    console.log("Wrong project type!");
 });
 
 var createAllFiles = (data) => {
@@ -21,11 +24,11 @@ var createAllFiles = (data) => {
         if (data.hasOwnProperty(key)) {
             var arrayFiles = data[key];
             if (key == "_") {
-                createFile.createFiles(arrayFiles, projectName, ".");
+                file.createFile(arrayFiles, projectName, ".", getProjectType);
                 continue;
             }
 
-            createFile.createFiles(arrayFiles, key, `./${projectName}`);
+            file.createFile(arrayFiles, key, `./${projectName}`, getProjectType);
         }
     }
 }

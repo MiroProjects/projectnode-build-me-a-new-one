@@ -23,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/MiroProjects/projectnode-build-me-a-new-one/issues"
   },
-  "homepage": "https://github.com/MiroProjects/projectnode-build-me-a-new-one#readme",
-  "dependencies": {
-    "download-git-repo": "^1.1.0",
-    "simple-git": "^1.110.0"
-  }
+  "homepage": "https://github.com/MiroProjects/projectnode-build-me-a-new-one#readme"
 }
