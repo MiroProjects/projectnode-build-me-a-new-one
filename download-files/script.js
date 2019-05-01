@@ -14,7 +14,12 @@ var downloadFromGit = (name, fullPath) => {
             }
         }
     });
-}
+};
+
+var downloadNPMPackage = (packageName, fullPath) => {
+    console.log(`Downloading...  ${packageName} package from NPM. Please wait!`);
+    getNPMLibrary(packageName, fullPath);
+};
 
 //For downloadng the files execute the git clone command and clone the files in the given folder
 var getGithubInformation = (url, fullPath, name) => {
@@ -27,6 +32,18 @@ var getGithubInformation = (url, fullPath, name) => {
     });
 };
 
+//For NPM packages
+var getNPMLibrary = (packageName, fullPath) => {
+    cp.exec(`npm install --prefix ${fullPath} ${packageName}`, (err) => {
+        if (err) {
+            console.log("----------");
+            console.log("Package error while installing!");
+            console.log("----------");
+        }
+    });
+};
+
 module.exports = {
-    downloadFromGit
+    downloadFromGit,
+    downloadNPMPackage
 }

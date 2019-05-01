@@ -30,5 +30,15 @@
             "@jquery",
             "script.js"
         ]
+    },
+    "web_project_server_app":{
+        "_": [
+            "index.html",
+            "script.js",
+            "style.css"
+        ],
+        "packages": [
+            "#request"
+        ]
     }
 }

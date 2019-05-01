@@ -6,7 +6,8 @@ const html = require("../config/configVariables");
 var projectEnum = {
     basic: "simple",
     bootstrap: "bootstrap",
-    jquery: "jquery"
+    jquery: "jquery",
+    server: "server"
 };
 
 var createFile = (files, folderName, path, projectType, content = "") => {
@@ -16,8 +17,15 @@ var createFile = (files, folderName, path, projectType, content = "") => {
     }
 
     for (let index = 0; index < files.length; index++) {
+        //If the files start with '@' then download them from GitHub
         if (files[index].startsWith("@")) {
             downloadFile.downloadFromGit(files[index].substr(1), `${path}/${folderName}`);
+            continue;
+        }
+
+        //If the files start with '#' then download them from NPM
+        if (files[index].startsWith("#")) {
+            downloadFile.downloadNPMPackage(files[index].substr(1), `${path}/${folderName}`);
             continue;
         }
 
@@ -30,6 +38,9 @@ var createFile = (files, folderName, path, projectType, content = "") => {
             }
             else if(projectType.includes(projectEnum.jquery)){
                 content = html.htmlJquery;
+            }
+            else if(projectType.includes(projectEnum.server)){
+                content = html.html5;
             }
         }
 
